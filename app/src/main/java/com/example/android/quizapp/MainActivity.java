@@ -2,8 +2,10 @@ package com.example.android.quizapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,11 +17,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
-    // Psuedo code
-
-
-    // check ansewers
 
     //radio buttons
 
@@ -51,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     //checkbox
 
     private int checkCheckboxQuestion() {
-        int result = 0;
+        int quizScore = 0;
 
         CheckBox q2a1 = (CheckBox) findViewById(R.id.q2a1);
         boolean isQ2A1checked = q2a1.isChecked();
@@ -66,11 +63,21 @@ public class MainActivity extends AppCompatActivity {
         boolean isQ2A4checked = q2a4.isChecked();
 
         if ((isQ2A1checked && isQ2A3checked) && (!isQ2A2checked && !isQ2A4checked)) {
-            result = 1;
+            quizScore = 1;
         }
-        return result;
+        return quizScore;
     }
 
+    private int checkFillInQuestion() {
+        EditText q6a1 = (EditText) findViewById(R.id.q6a1);
+        String questionSixAnswer = q6a1.getText().toString();
+        questionSixAnswer = questionSixAnswer.trim();
+        Log.v("checkFillInQuestion", questionSixAnswer); //test for logs
+        if (questionSixAnswer.equals("muggal")) {
+            return 1;
+        }
+        return 0;
+    }
 
     // display results
 
@@ -79,11 +86,12 @@ public class MainActivity extends AppCompatActivity {
         String message = "";
         quizScore += checkRadioButtonQuestions();
         quizScore += checkCheckboxQuestion();
+        quizScore += checkFillInQuestion();
 
-        if (quizScore == 5) {
+        if (quizScore == 6) {
             message = "You Aced it!";
         } else {
-            message = "You Got " + quizScore + " out of 5";
+            message = "You Got " + quizScore + " out of 6";
         }
 
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();

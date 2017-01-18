@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
-
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -192,12 +191,32 @@
                 </RadioGroup>
             </LinearLayout>
             <!--Question 5 end -->
+            <!-- Question 6 start -->
+            <LinearLayout
+                style="@style/questionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/question6"
+                    style="@style/question"
+                    android:text="@string/q6" />
+
+                <EditText
+                    android:id="@+id/q6a1"
+                    style="@style/answer"
+                    android:hint="Enter here"
+                    android:padding="16dp" />
+            </LinearLayout>
+            <!-- Question 6 end -->
             <!--submit button -->
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Submit"
-                android:onClick="submitAnswers"/>
+                android:layout_marginTop="16dp"
+                android:onClick="submitAnswers"
+                android:text="Submit" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

@@ -32,5 +32,8 @@
     <string name="q5a2">Griffindor</string> <!-- right answer -->
     <string name="q5a3">Hufflepuff</string>
     <string name="q5a4">Ravenclaw</string>
+
+    <!-- Question 6 -->
+    <string name="q6">What is the name of non magic user</string>
 </resources>
 
