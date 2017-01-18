@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+
+    <!-- Question 1-->
+    <string name="q1">What is the Name of the School that Harry Potter goes to?</string>
+    <string name="q1a1">Hogwarts</string> <!-- right answer -->
+    <string name="q1a2">Hoegarden</string>
+    <string name="q1a3">Harvard</string>
+
+    <!-- Question 2-->
+    <string name="q2">Who are Harry\'s closest friends?</string>
+    <string name="q2a1">Ron Weasly</string> <!-- right answer -->
+    <string name="q2a2">Draco Malfoy</string>
+    <string name="q2a3">Hermione Granger</string> <!-- right answer -->
+    <string name="q2a4">Neville Longbottom</string>
+
+    <!-- Question 3-->
+    <string name="q3">What sport did Harry play while at school?</string>
+    <string name="q3a1">football</string>
+    <string name="q3a2">Cricket</string>
+    <string name="q3a3">Quidditch</string> <!-- right answer -->
+
+    <!-- Question 4-->
+    <string name="q4">What is the Name Of The Villain that gave Harry his scar?</string>
+    <string name="q4a1">Dolores Umbridge</string>
+    <string name="q4a2">Bellatrix Lestrange</string>
+    <string name="q4a3">Voldemort</string> <!-- right answer -->
+
+    <!-- Question 5-->
+    <string name="q5">Which house did harry belong to at school?</string>
+    <string name="q5a1">Slytherin</string>
+    <string name="q5a2">Griffindor</string> <!-- right answer -->
+    <string name="q5a3">Hufflepuff</string>
+    <string name="q5a4">Ravenclaw</string>
+</resources>
+
